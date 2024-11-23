@@ -34,6 +34,27 @@
             <img src="https://via.placeholder.com/400" alt="Imagen de ejemplo">
         </section>
 
+        <section id="videos" style="border: 1px solid #d3d3d3; padding: 10px; margin-top: 10px;">
+            <h2>Video</h2>
+            <div id="youtube-player"></div>
+            <script>
+                // Cargar el reproductor de YouTube
+                (function loadYouTubePlayer() {
+                    const videoId = 'VIDEO_ID'; // Reemplaza con el ID de tu video
+                    const playerDiv = document.getElementById('youtube-player');
+        
+                    // Crear el contenedor del reproductor
+                    const player = document.createElement('object');
+                    player.setAttribute('type', 'text/html');
+                    player.setAttribute('data', `https://www.youtube.com/embed/hI9HQfCAw64`);
+                    player.setAttribute('width', '560');
+                    player.setAttribute('height', '315');
+                    player.setAttribute('allowfullscreen', 'true');
+                    playerDiv.appendChild(player);
+                })();
+            </script>
+        </section>
+
         <section id="noticias" style="border: 1px solid #d3d3d3; padding: 10px; margin-top: 10px;">
             <h2>Noticias</h2>
             <article class="noticia" style="border: 1px solid #d3d3d3; padding: 10px; margin-bottom: 10px;">
