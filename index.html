@@ -182,6 +182,28 @@
             margin: 3rem 0; /* Reduce space above */
         }
 
+        .contact-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;  /* Keeps the form content above the background */
+        }
+
+        .contact-form {
+            max-width: 500px;
+            flex-grow: 1;
+            z-index: 2;
+        }
+
+        .contact-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 3;  /* Ensures the logo is above everything else */
+        }
+
+
         .contact-section::before {
             content: '';
             position: absolute;
@@ -328,7 +350,7 @@
             </article>
             <article class="service-card">
                 <div class="service-image">
-                    <img src="https://www.shutterstock.com/search/cleaning-company" alt="Limpieza de Oficinas">
+                    <img src="https://www.arreta.com/wp-content/uploads/2024/04/shutterstock_1401013190-1024x683.jpg" alt="Limpieza de Oficinas">
                 </div>
                 <h3 class="service-title">Limpieza de Oficinas</h3>
                 <p class="service-price">149 €</p>
@@ -336,7 +358,7 @@
             </article>
             <article class="service-card">
                 <div class="service-image">
-                    <img src="https://www.limpieza-facil.com/wp-content/uploads/2021/10/fundamentos-limpieza-ecologica.png" alt="Limpieza de Alfombras">
+                    <img src="https://afondohigiene.com.ar/wp-content/uploads/2022/06/asian-cleaning-service-woman-worker-cleaning-in-li-2021-12-09-20-22-54-utc.jpg" alt="Limpieza de Alfombras">
                 </div>
                 <h3 class="service-title">Limpieza de Alfombras</h3>
                 <p class="service-price">59 €</p>
@@ -347,22 +369,27 @@
 
     <section id="contacto" class="contact-section">
         <h2 class="section-title">Contáctanos</h2>
-        <form action="#" class="contact-form">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="contact-content">
+            <form action="#" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <img src="../imagenes/logo3.png" width="200px" alt="Logo" class="contact-logo"/>
     </section>
+    
+    
 
     <footer>
         <div class="footer-content">
